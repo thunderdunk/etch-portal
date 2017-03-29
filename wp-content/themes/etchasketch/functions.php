@@ -157,6 +157,7 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/post-types.php';
 require get_template_directory() . '/inc/loops.php';
 require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/inc/taxonomies.php';
 
 /**
  * WPAlchemy

@@ -51,4 +51,69 @@
 
 	<p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-docs button">Add Document</a></p>
 
+
+	<section>
+			<h2><i class="fa fa-list-ol"></i> &nbsp;Fast Facts</h2>
+			<p>Multiple sets can be added if there are more than one program within this department.</p>
+
+		<!--	<?php //$mb->the_field('ff-slider-check'); ?>
+			<p><input type="checkbox" name="<?php $mb->the_name(); ?>" value="slider"<?php $mb->the_checkbox_state('slider'); ?>/> <label>Use slider</label></p>
+	-->
+
+			<p class="sort-warning"><i>Remember to save after ordering items!</i></p>
+
+			<?php while($mb->have_fields_and_multi('fast-facts')): ?>
+			<?php $mb->the_group_open(); ?>
+		 		<div class="content">
+
+			 		<div class="repeating-heading">
+						<h4>Fast Fact Group&nbsp;&nbsp;<i class="fa fa-arrows"></i></h4>
+						<a href="#" class="dodelete button">Remove</a>
+					</div><!--.repeating-heading-->
+
+					<div class="meta-label">
+						<label>Group Heading</label>
+					</div><!--.meta-label-->
+
+					<div class="meta-input">
+						<?php $mb->the_field('lp-ff-heading'); ?>
+						<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+						<span></span>
+					</div><!--.meta-input-->
+
+					<div class="meta-label">
+						<label>Program</label>
+					</div><!--.meta-label-->
+
+				 	<div class="meta-input">
+						<p>
+							<?php $mb->the_field('lp-ff-program'); ?>
+							<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+							<span></span>
+						</p>
+					</div><!--.meta-field-->
+
+					<div class="meta-label">
+						<label>Format</label>
+					</div><!--.meta-label-->
+
+				 	<div class="meta-input">
+						<p>
+							<?php $mb->the_field('lp-ff-format'); ?>
+							<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+							<span></span>
+						</p>
+					</div><!--.meta-field-->
+
+					
+				</div><!--.content-->
+
+			<?php $mb->the_group_close(); ?>
+			<?php endwhile; ?>
+
+			<p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-fast-facts add button"><i class="fa fa-plus-circle"></i> Add Another</a></p>
+
+
+
+		</section>
 </div>
