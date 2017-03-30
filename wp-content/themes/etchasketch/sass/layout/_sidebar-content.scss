@@ -1,20 +1,50 @@
-.content-area {
-	float: right;
-	margin: 0 0 0 (-$size__site-sidebar);
-	width: $size__site-main;
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-x-large: 1280px;
+
+.container {
+	margin: 0 5%;
 }
 
-.site-main {
-	margin: 0 0 0 $size__site-sidebar;
+@media all and ( min-width: $break-small ) {
+
 }
 
-.site-content .widget-area {
-	float: left;
-	overflow: hidden;
-	width: $size__site-sidebar;
+@media all and ( min-width: $break-medium ) {
+
 }
 
-.site-footer {
-	clear: both;
-	width: $size__site-main;
+@media all and ( min-width: $break-large ) {
+	.content-area {
+		float: right;
+		margin: 0 0 0 (-$size__site-sidebar);
+		width: $size__site-main;
+	}
+
+	.site-main {
+		margin: 0 0 0 $size__site-sidebar;
+	}
+
+	.site-content .widget-area {
+		float: left;
+		overflow: hidden;
+		width: $size__site-sidebar;
+	}
+
+	.site-footer {
+		clear: both;
+		width: $size__site-main;
+	}
+
+	.container {
+		margin: 0 4%;
+	}
+}
+
+@media all and ( min-width: $break-x-large ) {
+	.container {
+		margin: 0 auto;
+		max-width: $break-large;
+	}
 }
