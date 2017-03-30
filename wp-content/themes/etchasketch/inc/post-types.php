@@ -23,18 +23,19 @@ function etch_tutorial_register() {
 
 	$args = array(
 		'labels'             => $labels,
-		//'menu_icon'			=> 'dashicons-id',
+		'menu_icon'			=> 'dashicons-welcome-learn-more',
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'etch_tutorial' ),
+		'rewrite'            => array( 'slug' => 'etch-tutorials' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'thumbnail' )
+		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+		'taxonomies'					=> array( 'category' )
 	);
 
 	register_post_type( 'etch_tutorial', $args );

@@ -8,7 +8,7 @@
 	</div><!--.meta-label-->
 
 	<div class="meta-input">
-		<input type="text" name="<?php $metabox->the_name('tut-vimeo'); ?>" value="<?php $metabox->the_value('name'); ?>"/>
+		<input type="text" name="<?php $metabox->the_name('tut-vimeo'); ?>" value="<?php $metabox->the_value('tut-vimeo'); ?>"/>
 		<span>Paste Vimeo URL, example: xxxx</span>
 	</div><!--.meta-label-->
 
@@ -19,7 +19,7 @@
 	</div><!--.meta-label-->
 
 	<div class="meta-input">
-		<?php $mb->the_field('imgurl'); ?>
+		<?php $mb->the_field('tut-pdf'); ?>
 		<?php $wpalchemy_media_access->setGroupName('doc-n'. $mb->get_the_index())->setInsertButtonLabel('Insert'); ?>
 		<?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
 		<?php echo $wpalchemy_media_access->getButton( array( 'label' => 'Select File' ) ); ?>
@@ -52,7 +52,7 @@
 					</div><!--.meta-label-->
 
 					<div class="meta-input">
-						<input type="text" name="<?php $metabox->the_name('tut-vimeo'); ?>" value="<?php $metabox->the_value('wt-step-title'); ?>"/>
+						<input type="text" name="<?php $metabox->the_name('wt-step-title'); ?>" value="<?php $metabox->the_value('wt-step-title'); ?>"/>
 						<span></span>
 					</div><!--.meta-label-->
 
@@ -82,7 +82,7 @@
 			<?php $mb->the_group_close(); ?>
 			<?php endwhile; ?>
 
-			<p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-fast-facts add button"><i class="fa fa-plus-circle"></i> Add Another</a></p>
+			<p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-wt-steps add button"><i class="fa fa-plus-circle"></i> Add Another</a></p>
 
 		</section>
 </div>
