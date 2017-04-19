@@ -183,16 +183,29 @@ include_once 'metaboxes/tutorial-spec.php';
 /**
  * Customize Login page
  */
+// Change logo
 function etch_login_logo() { ?>
    <style type="text/css">
        #login h1 a, .login h1 a {
 				 	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/EtchK-1.png);
-			 		height:65px;
-			 		width:320px;
-			 		background-size: 320px 65px;
-			 		background-repeat: no-repeat;
+			 		height:46px;
+			 		width:160px;
+			 		background-size: 100%;
          	padding-bottom: 30px;
          }
    </style>
  <?php }
+
+// Change logo URL
+function etch_loginURL() {
+    return 'https://zhealthdocumentation.com';
+}
+
+// Change link title
+function etch_loginTitle() {
+	return 'Etch by ZHealth';
+}
+
+add_filter( 'login_headertitle', 'etch_loginTitle' );
+add_filter( 'login_headerurl', 'etch_loginURL' );
 add_action( 'login_enqueue_scripts', 'etch_login_logo' );
