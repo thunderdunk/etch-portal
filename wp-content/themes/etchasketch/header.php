@@ -45,6 +45,10 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'etchasketch' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+
+		<aside class="widget-area">
+			<?php widget_active_user(); ?>
+		</aside><!-- .widget-area -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
